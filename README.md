@@ -58,7 +58,7 @@ strike/
 
 Just open strikepage.html in your browser.
 
-![Strike Landing Page Preview](./web_course.png)
+![Strike Landing Page Preview]
 
 👨‍💻 Author
 Krishna Pratap Singh
