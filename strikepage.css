@@ -1,0 +1,619 @@
+        /*
+           RESET & BASE STYLES
+            */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #a0a0a0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* 
+           NAVIGATION BAR - RESPONSIVE
+           */
+        .navbar {
+            height: 70px;
+            background-color: black;
+            color: white;
+            border: 1px solid rgb(216, 202, 12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px; /* Add padding for mobile */
+            position: sticky; /* Make navbar sticky on scroll */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            height: 60px;
+            width: 120px;
+        }
+
+        .logo {
+            background-image: url(white_logo.png);
+            height: 60px;
+            width: 100%;
+            
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        /* Navigation Links Container */
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: color 0.3s ease;
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: #ff5722;
+        }
+
+        .btn-login {
+            background-color: #ca140e;
+            padding: 0.5rem 1rem;
+            border: 1px solid #010101;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-login:hover {
+            background-color: #ff5722;
+        }
+
+        /* Mobile Menu Toggle Button (Hidden on Desktop) */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        /* 
+           HERO SECTION - RESPONSIVE
+         */
+        .hero-cnt {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px; /* Add padding for mobile */
+        }
+
+        .strike-title {
+            font-size: 6rem; /* Default size for desktop */
+            color: #e07f61;
+            margin-bottom: 1rem;
+            margin-top: 40px;
+            font-weight: 900;
+            letter-spacing: 0.2rem;
+            text-shadow: 0 0 50px rgba(255, 107, 53, 0.3);
+            display: flex;
+            justify-content: center;
+            gap: 0.04em;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            transition: transform 0.5s ease;
+        }
+
+        .strike-title i {
+            color: #e07f61;
+            font-size: 5rem;
+            margin-top: 45px;
+            margin-left: 10px;
+        }
+
+        .strike-title:hover {
+            color: #ff5722;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .strike-title i:hover {
+            color: #ff5722;
+        }
+
+        .hero-cnt h2 {
+            font-size: 30px;
+            margin-bottom: 2rem;
+            margin-top: 20px;
+            color: rgb(145, 137, 137);
+            font-weight: bold;
+        }
+
+        .hero-cnt p {
+            font-size: 20px;
+            margin: 15px auto 5rem;
+            color: rgb(145, 137, 137);
+            font-weight: bold;
+            max-width: 1200px; /* Limit width for readability */
+            padding: 0 20px; /* Add padding */
+        }
+
+        /* Button Container for Better Mobile Layout */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow buttons to stack on mobile */
+            margin-top: 2rem;
+        }
+
+        .explore-btn,
+        .feature-btn {
+            background-color: #e07f61;
+            color: rgb(0, 0, 0);
+            padding: 1.5rem 2rem;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 5px rgba(227, 125, 88, 0.4);
+        }
+
+        .explore-btn:hover,
+        .feature-btn:hover {
+            background-color: #ff5722;
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        /* 
+           SECTION HEADINGS - RESPONSIVE
+           */
+        .why {
+            text-align: center;
+            margin-top: 50px;
+            padding: 0 20px; /* Add padding */
+        }
+
+        .why h2 {
+            color: #e07f61;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 50px rgba(255, 107, 53, 0.3);
+            transition: transform 0.5s ease;
+        }
+
+        .why h2:hover {
+            color: #ff5722;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        /*
+           PROJECT/FEATURES GRID - RESPONSIVE
+        */
+        .project-container {
+            margin: 30px auto;
+            padding: 0 20px; /* Add padding for mobile */
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            gap: 25px;
+        }
+
+        .project {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            border: 1px solid #3a3a3a;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            border: 1px solid #ff5722;
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 5px 5px 10px 5px rgba(232, 6, 111, 0.3);
+        }
+
+        .project img {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #e07f61;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .card span {
+            background-color: rgba(255, 191, 0, 0.1);
+            color: #e0ad14;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            margin-right: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin: 1rem 0;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .feature-icon:hover {
+            font-size: 3.5rem;
+            transform: translateY(-10px);
+        }
+
+        /* 
+           ACHIEVEMENTS GRID - RESPONSIVE
+        */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            gap: 30px;
+            margin: 30px auto;
+            padding: 0 20px;
+            max-width: 1400px;
+        }
+
+        .item {
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #3a3a3a;
+            background-color: #1e1e1e;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .item h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #ff5722;
+            margin: 1rem 0;
+        }
+
+        .item p {
+            font-size: 1rem;
+            color: #a0a0a0;
+        }
+
+        .item:hover {
+            transform: translateY(-10px) scale(1.05);
+            border: 1px solid #ff5722;
+            box-shadow: 5px 5px 10px 5px rgba(232, 6, 111, 0.3);
+        }
+
+        /* 
+           FOOTER - RESPONSIVE
+         */
+        footer {
+            background: #0a0a0a;
+            margin-top: 50px;
+            padding: 3rem 5%;
+            border-top: 2px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #ff5722;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .footer-logo:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            color: rgba(224, 224, 224, 0.6);
+            margin: 1rem 0;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 107, 53, 0.2);
+            border: 1px solid #ff5722;
+            border-radius: 50%;
+            transition: all 0.4s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-8px) rotate(360deg);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+            background: #ff5722;
+        }
+
+        .social-links a img {
+            filter: brightness(0) invert(1);
+        }
+
+        /* 
+           TABLET RESPONSIVENESS (768px - 1024px)
+         */
+        @media screen and (max-width: 1024px) {
+            /* Adjust title size for tablets */
+            .strike-title {
+                font-size: 4.5rem;
+            }
+
+            .strike-title i {
+                font-size: 4rem;
+            }
+
+            /* Make project grid 2 columns on tablets */
+            .project-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Make achievements grid 2 columns on tablets */
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-cnt h2 {
+                font-size: 24px;
+            }
+
+            .hero-cnt p {
+                font-size: 18px;
+            }
+
+            .explore-btn,
+            .feature-btn {
+                font-size: 1.3rem;
+                padding: 1.2rem 1.8rem;
+            }
+        }
+
+        /* 
+           MOBILE RESPONSIVENESS (up to 768px)
+         */
+        @media screen and (max-width: 768px) {
+            /* Show hamburger menu button on mobile */
+            .menu-toggle {
+                display: flex;
+            }
+
+            /* Hide navigation links by default on mobile */
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%; /* Hide off-screen */
+                width: 250px;
+                height: calc(100vh - 70px);
+                background-color: #000;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem 0;
+                gap: 0;
+                transition: right 0.3s ease;
+                border-left: 1px solid rgb(216, 202, 12);
+            }
+
+            /* Show navigation when active */
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 1rem 2rem;
+                border-radius: 0;
+                text-align: left;
+            }
+
+            /* Adjust hero title for mobile */
+            .strike-title {
+                font-size: 3rem;
+                margin-top: 20px;
+            }
+
+            .strike-title i {
+                font-size: 2.5rem;
+                margin-left: 5px;
+            }
+
+            .hero-cnt h2 {
+                font-size: 20px;
+                margin-bottom: 1rem;
+            }
+
+            .hero-cnt p {
+                font-size: 16px;
+                margin-bottom: 3rem;
+            }
+
+            /* Stack buttons vertically on mobile */
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .explore-btn,
+            .feature-btn {
+                font-size: 1.2rem;
+                padding: 1rem 1.5rem;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            /* Make project grid single column on mobile */
+            .project-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Make achievements grid single column on mobile */
+            .grid-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .why h2 {
+                font-size: 2rem;
+            }
+
+            .feature-icon {
+                font-size: 2.5rem;
+            }
+
+            .feature-icon:hover {
+                font-size: 3rem;
+            }
+
+            /* Footer adjustments */
+            .footer-logo {
+                font-size: 1.3rem;
+            }
+
+            .footer-text {
+                font-size: 0.9rem;
+            }
+
+            .social-links a {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* 
+           SMALL MOBILE DEVICES (up to 480px)
+         */
+        @media screen and (max-width: 480px) {
+            .navbar {
+                height: 60px;
+                padding: 0 15px;
+            }
+
+            .nav-logo {
+                width: 100px;
+                height: 50px;
+            }
+
+            .strike-title {
+                font-size: 2.5rem;
+                letter-spacing: 0.1rem;
+            }
+
+            .strike-title i {
+                font-size: 2rem;
+            }
+
+            .hero-cnt h2 {
+                font-size: 18px;
+            }
+
+            .hero-cnt p {
+                font-size: 14px;
+            }
+
+            .explore-btn,
+            .feature-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.2rem;
+            }
+
+            .why h2 {
+                font-size: 1.5rem;
+            }
+
+            .card h3 {
+                font-size: 1.1rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+
+            .item h3 {
+                font-size: 1.1rem;
+            }
+
+            .item p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* 
+           LARGE DESKTOP (1440px+)
+         */
+        @media screen and (min-width: 1440px) {
+            .strike-title {
+                font-size: 7rem;
+            }
+
+            .strike-title i {
+                font-size: 6rem;
+            }
+
+            .hero-cnt h2 {
+                font-size: 35px;
+            }
+
+            .hero-cnt p {
+                font-size: 22px;
+            }
+        }

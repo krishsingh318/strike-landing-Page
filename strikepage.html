@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strike -landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="strikepage.css">
+</head>
+<body>
+    <header>
+        <!-- NAVIGATION BAR -->
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo"></div>
+            </div>
+            
+            <!-- Hamburger Menu for Mobile -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#Features">Features</a>
+                <a href="#Courses">Courses</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#About Us">About Us</a>
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <div class="hero-cnt" id="Home">
+            <h1 class="strike-title">
+                <span>S</span>
+                <span>T</span>
+                <span>R</span>
+                <span>I</span>
+                <span>K</span>
+                <span>E</span>
+                <i class="fa-solid fa-strikethrough"></i>
+            </h1>
+            
+            <h2>Learn by building, connect by doing.</h2>
+            <p>Strike is not just a course-It is a weapon to counter DSA interview, crack FAANG companies and Build competitive programming Skill</p>
+            
+            <div class="button-container">
+                <a href="#Courses" class="explore-btn">Explore</a>
+                <a href="#Features" class="feature-btn">Know More</a>
+            </div>
+        </div>
+
+        <!-- FEATURES SECTION -->
+        <div class="why" id="Features">
+            <h2>Why Choose Strike?</h2>
+        </div>
+        
+        <div class="project-container">
+            <div class="project">
+                <span class="feature-icon">💪</span>
+                <div class="card">
+                    <h3>Hands-On Learning</h3>
+                    <p>Build real projects, not just watch tutorials – learn by doing and strengthen your coding muscle every day</p>
+                    <span>Project-Based</span><span>Learning</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <span class="feature-icon">🎯</span>
+                <div class="card">
+                    <h3>Full Guidance Journey</h3>
+                    <p>A complete step-by-step path led by top mentors, designed to take you from beginner to confident developer.</p>
+                    <span>Step-by-Step</span><span>Guided Path</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <span class="feature-icon">⚡</span>
+                <div class="card">
+                    <h3>Expert Mentors</h3>
+                    <p>Learn directly from experienced engineers who've worked at leading tech companies – get insider-level insights</p>
+                    <span>Mentorship</span><span>Industry Insights</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <span class="feature-icon">🏆</span>
+                <div class="card">
+                    <h3>Mock Interviews & Career Boost</h3>
+                    <p>Practice with real interview questions, get personalized feedback, and prepare to land your dream job.</p>
+                    <span>Mock Interviews</span><span>Career Coaching</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <span class="feature-icon">🎓</span>
+                <div class="card">
+                    <h3>Certification & Growth</h3>
+                    <p>Earn certificates for every milestone and showcase your achievements on GitHub and LinkedIn.</p>
+                    <span>Certification</span><span>Growth</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <span class="feature-icon">👥</span>
+                <div class="card">
+                    <h3>Community & Hackathons</h3>
+                    <p>Join live hackathons, coding challenges, and collaborate with a global network of passionate coders.</p>
+                    <span>Community</span><span>Collaboration</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- COURSES SECTION -->
+        <div id="Courses" class="why">
+            <h2>Our Courses</h2>
+        </div>
+        
+        <div class="project-container">
+            <div class="project">
+                <img src="./genai_is.png" alt="Generative AI Course">
+                <div class="card">
+                    <h3>🤖 Generative AI</h3>
+                    <p>Dive into the world of AI creation – learn how to build chatbots, image generators, and smart automation using the latest AI models.</p>
+                    <span>Join Now</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <img src="./webdev.png" alt="Full Stack Development Course">
+                <div class="card">
+                    <h3>💻 Full Stack Development</h3>
+                    <p>Master both front-end and back-end development – create dynamic, production-ready web apps using HTML, CSS, JavaScript, React, and Node.js.</p>
+                    <span>Join Now</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <img src="./dsaPaid.png" alt="DSA Course">
+                <div class="card">
+                    <h3>🧠 Data Structures & Algorithms (DSA)</h3>
+                    <p>Strengthen your problem-solving skills with in-depth DSA concepts, coding challenges, and step-by-step logic building for interviews.</p>
+                    <span>Join Now</span>
+                </div>
+            </div>
+            
+            <div class="project">
+                <img src="./HLD.png" alt="System Design Course">
+                <div class="card">
+                    <h3>🗝️ System Design</h3>
+                    <p>Learn how to architect scalable, high-performance systems like real-world tech giants – with practical design patterns and case studies</p>
+                    <span>Join Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <div class="why" id="achievements">
+            <h2>Achievements</h2>
+        </div>
+        
+        <div class="grid-container">
+            <div class="item">
+                <span class="feature-icon">🏆</span>
+                <h3>Top Learners Rewarded</h3>
+                <p>Monthly rewards for our best-performing coders</p>
+            </div>
+            
+            <div class="item">
+                <span class="feature-icon">👨‍💻</span>
+                <h3>10k+ active learners</h3>
+                <p>A growing community of passionate learners.</p>
+            </div>
+            
+            <div class="item">
+                <span class="feature-icon">🧩</span>
+                <h3>300+ Projects built</h3>
+                <p>Students create real-world apps and tools.</p>
+            </div>
+            
+            <div class="item">
+                <span class="feature-icon">📈</span>
+                <h3>95% Skill Growth Rate</h3>
+                <p>Learners show massive improvement every month.</p>
+            </div>
+            
+            <div class="item">
+                <span class="feature-icon">🚀</span>
+                <h3>Career Launch Success</h3>
+                <p>Many of our learners now work at top tech firms.</p>
+            </div>
+            
+            <div class="item">
+                <span class="feature-icon">⭐</span>
+                <h3>Rated 4.9/5 by Learners</h3>
+                <p>Loved and trusted by our coder community</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-content">
+            <a href="https://coderarmy.in/#home" target="_blank" class="footer-logo">&lt;/&gt; Coder Army</a>
+            <p class="footer-text">Empowering Students to conquer the coding battlefield</p>
+            <p class="footer-text">Join the STRIKE revolution and transform your coding career</p>
+            
+            <div class="social-links">
+                <a href="https://www.youtube.com/@CoderArmy9" target="_blank" title="YouTube">
+                    <img style="height: 25px;" src="./youtube.svg" alt="YouTube">
+                </a>
+                <a href="https://x.com/CoderArmy?t=xjOUl6A7M4onM0FpMyzKug&s=08" target="_blank" title="Twitter">
+                    <img style="height: 25px;" src="./x.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/coderarmy/" target="_blank" title="LinkedIn">
+                    <img style="height: 35px;" src="./linkedin-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/coder_army9?igsh=MXMzcnZwN211ZDBhcQ==" target="_blank" title="Instagram">
+                    <img style="height: 35px;" src="./instagram.svg" alt="Instagram">
+                </a>
+            </div>
+            
+            <p class="footer-text" style="margin-top: 2rem; font-size: 0.9rem;">
+                © 2025 Coder Army CSS Hackathon. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 
+        // MOBILE MENU TOGGLE FUNCTION
+        // This function shows/hides the navigation menu on mobile devices
+        // 
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // 
+        // CLOSE MOBILE MENU WHEN CLICKING A LINK
+        // This ensures the menu closes after navigation
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        
+        // SMOOTH SCROLLING FOR ANCHOR LINKS
+        // Makes the page scroll smoothly when clicking navigation links
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
