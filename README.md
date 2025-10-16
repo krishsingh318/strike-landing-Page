@@ -8,7 +8,7 @@ It’s designed to showcase courses, features, and achievements in a clean and p
 
 ## 🌐 Live Preview
 
-🚀 **Preview Link:** [Add your Netlify or GitHub Pages link here]  
+🚀 **Preview Link:** [https://strike-webpage.netlify.app/]  
 
 (You can replace the above line once you deploy it.)
 
@@ -58,7 +58,8 @@ strike/
 
 Just open strikepage.html in your browser.
 
-![Strike Landing Page Preview]
+![Strike Landing Page Preview]  <img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/31e54230-b143-4370-99fe-8e096e7868d9" />
+
 
 👨‍💻 Author
 Krishna Pratap Singh
